@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Mandiri</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        transition:
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container:hover,
+      .container:active {
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.18);
+        transform: translateY(-4px) scale(1.01);
+      }
+
+      .container h1 {
+        text-align: center;
+        color: #333;
+      }
+      .container form {
+        display: flex;
+        flex-direction: column;
+      }
+      .container form input {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .container form select {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .container form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+      }
+      .container form button:hover {
+        background-color: #555;
+      }
+      .container form button:active {
+        background-color: #777;
+      }
+      .container form button:focus {
+        outline: none;
+      }
+      .container form button:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+      }
+      .container form button:disabled:hover {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Pendaftaran Perpustakaan</h1>
+      <form id="frm1" action="submit.php">
+        <p>Nama</p>
+        <input type="text" id="Nama" name="Nama" placeholder="Masukkan Nama" />
+        <p>NIS/NISN</p>
+        <input
+          type="number"
+          id="nis"
+          name="Nis/Nisn"
+          placeholder="Masukkan NIS/NISN"
+        />
+        <p>Jurusan</p>
+        <select name="Jurusan" id="Jurusan" placeholder="Pilih Jurusan">
+          <option value="RPL">RPL</option>
+          <option value="TKJ">TKJ</option>
+          <option value="DKV">DKV</option>
+        </select>
+        <p>Kelas</p>
+        <select name="Kelas" id="kelas" placeholder="Pilih Kelas">
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <p>Jenis Kelamin</p>
+        <input type="radio" name="jenis_kelamin" id="jk_l" value="Laki-laki" />
+        <label for="jk_l">Laki-laki</label>
+
+        <input type="radio" name="jenis_kelamin" id="jk_p" value="Perempuan" />
+        <label for="jk_p">Perempuan</label>
+
+        <p>Tempat Lahir</p>
+        <input type="text" name="TempatLahir" id="TempatLahir" />
+        <p>Tanggal Lahir</p>
+        <input type="date" name="TglLahir" id="tglLahir" />
+        <p>Alamat</p>
+        <input type="text" name="Alamat" id="Alamat" />
+        <p>No. HP</p>
+        <input type="number" name="NoHp" id="nohp" />
+        <p>Email</p>
+        <input type="email" name="Email" id="email" />
+        <br />
+        <button type="button" onclick="myFunction()">Daftar</button>
+        <button type="button" onclick="resetFunction()">Reset</button>
+      </form>
+
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("frm1");
+        var txt = "";
+
+        for (var i = 0; i < x.elements.length; i++) {
+          var el = x.elements[i];
+
+          if (el.type === "button") continue;
+
+          if (el.type === "radio") {
+            if (el.checked) {
+              txt += el.name + ": " + el.value + "<br>";
+            }
+            continue;
+          }
+
+          txt += el.name + ": " + el.value + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = txt;
+      }
+
+      function resetFunction() {
+        document.getElementById("frm1").reset();
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

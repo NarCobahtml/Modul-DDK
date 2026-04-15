@@ -1,0 +1,144 @@
+:root {
+  --bg: #fff8f4;
+  --card: #fff;
+  --muted: #6b6b6b;
+  --accent: #ff7a59;
+  --accent-2: #ffb199;
+  --border: #f0dcd2;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --max-width: 880px;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #fff);
+  color: #222;
+  padding: 24px 16px;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.topnav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+.topnav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.topnav a:hover {
+  background: var(--accent-2);
+  color: #5a2b1f;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.card h3 {
+  margin: 0 0 12px 0;
+  color: #2e2e2e;
+}
+
+.profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.profile .info {
+  flex: 1;
+}
+.profile .photo {
+  width: 160px;
+  flex: 0 0 160px;
+}
+.profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  padding: 6px 0;
+  align-items: center;
+}
+.label {
+  width: 220px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.sep {
+  color: var(--muted);
+}
+.value {
+  flex: 1;
+}
+.value a {
+  color: var(--accent);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px dashed #f3e6e0;
+}
+.list li:first-child {
+  border-top: 0;
+}
+.list strong {
+  color: var(--muted);
+}
+
+.media-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.media-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.media-row audio {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.media-row video {
+  max-width: 80%;
+  border-radius: 8px;
+}

@@ -1,0 +1,136 @@
+body {
+  background: #e6f2ff;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #1f528d;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 6px 4px;
+  vertical-align: middle;
+}
+
+thead th {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tbody tr:hover {
+  background-color: #eaf3ff;
+  transition: 0.3s;
+}
+
+.header-top {
+  background-color: #f2f2f2;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.header-side {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.kelas-header {
+  font-size: 13px;
+  background-color: #e8eefb;
+  letter-spacing: 0.5px;
+}
+
+.apel {
+  background-color: #f2f2f2;
+}
+.bing {
+  background-color: #9900ff;
+}
+.inka {
+  background-color: #f1c232;
+}
+.ipas {
+  background-color: #ffff00;
+}
+.bd {
+  background-color: #93c47d;
+}
+.seni {
+  background-color: #f5d3b4;
+}
+.mat {
+  background-color: #bfbfbf;
+}
+.pai {
+  background-color: #3c78d7;
+  color: #fff;
+}
+.pjok {
+  background-color: #00fffe;
+}
+.ddk {
+  background-color: #ff0001;
+  color: #fff;
+}
+.pp {
+  background-color: #93c47c;
+}
+.sej {
+  background-color: #ff00fe;
+  color: #fff;
+}
+.bin {
+  background-color: #00ff01;
+}
+
+@media screen and (max-width: 900px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+}

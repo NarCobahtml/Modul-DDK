@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Mandiri</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+      }
+
+      table {
+        width: 50%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Data Nama Siswa RPL</h2>
+    <h3>SMK Negeri 4 Malang</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>NIS</th>
+          <th>Nama Siswa</th>
+          <th>Kelas</th>
+        </tr>
+      </thead>
+      <tbody id="tabel-siswa"></tbody>
+    </table>
+
+    <script>
+      //Array
+      const dataSiswa = [
+        { nis: "1001", nama: "Andi", kelas: "X RPL A" },
+        { nis: "1002", nama: "Budi", kelas: "X RPL B" },
+        { nis: "1003", nama: "Citra", kelas: "X RPL C" },
+        { nis: "1004", nama: "Dewi", kelas: "XI RPL A" },
+      ];
+
+      // Mengambil elemen tbody menggunakan DOM
+      const tbody = document.getElementById("tabel-siswa");
+
+      // Melakukan forEach perulangn
+      dataSiswa.forEach((siswa, index) => {
+        let row = `<tr>
+                <td>${index + 1}</td>
+                <td>${siswa.nis}</td>
+                <td>${siswa.nama}</td>
+                <td>${siswa.kelas}</td>
+            </tr>`;
+
+        tbody.innerHTML += row;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOdul 10-Latihan1</title>
+  </head>
+  <body>
+    <p id="intro">Hello World!</p>
+    <p>THis example demonstrates the <b>getElementById</b> method!</p>
+    <p id="demo"></p>
+    <script>
+      myElement = document.getElementById("intro");
+      document.getElementById("demo").innerHTML =
+        "The text from the intro paragraph is: " + myElement.innerHTML;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 6px;
+        border: #000 1px solid;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[readonly] {
+        background-color: #f5f5f5;
+      }
+
+      input[type="button"],
+      input[type="reset"] {
+        cursor: pointer;
+        width: auto;
+        color: white;
+        background-color: #4caf50;
+      }
+      input[type="checkbox"] {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 align="center">Travel Grafika</h2>
+    <form name="fform">
+      <table>
+        <tr>
+          <td>Nama:</td>
+          <td>
+            <input type="text" name="inama" />
+          </td>
+        </tr>
+        <tr>
+          <td>Tujuan:</td>
+          <td>
+            <select name="itujuan">
+              <option value="Malang">Malang</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Trenggalek">Trenggalek</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Kelas:</td>
+          <td>
+            <select name="ikelas">
+              <option value="Ekonomi">Ekonomi</option>
+              <option value="Bisnis">Bisnis</option>
+              <option value="Eksekutif">Eksekutif</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Jumlah Tiket:</td>
+          <td>
+            <input type="text" name="ijumlah" />
+          </td>
+        </tr>
+        <tr>
+          <td>Member</td>
+          <td><input type="checkbox" name="imember" />Ya</td>
+        </tr>
+        <tr>
+          <td>Harga Tiket</td>
+          <td><input type="text" name="iharga" readonly /></td>
+        </tr>
+        <tr>
+          <td>Sub Total</td>
+          <td><input type="text" name="isubtotal" readonly /></td>
+        </tr>
+        <tr>
+          <td>Diskon</td>
+          <td><input type="text" name="idiskon" readonly /></td>
+        </tr>
+        <tr>
+          <td>Total Bayar</td>
+          <td><input type="text" name="itotal" readonly /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="Hitung" onclick="hitungTotalBayar()" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function hitungTotalBayar() {
+        var nama = document.fform.inama.value;
+        var tujuan = document.fform.itujuan.value;
+        var kelas = document.fform.ikelas.value;
+        var jumlah = parseInt(document.fform.ijumlah.value);
+        var member = document.fform.imember.checked;
+
+        var hargaTiket = 0;
+
+        if (tujuan === "Malang") {
+          if (kelas === "Ekonomi") hargaTiket = 50000;
+          else if (kelas === "Bisnis") hargaTiket = 75000;
+          else if (kelas === "Eksekutif") hargaTiket = 100000;
+        } else if (tujuan === "Surabaya") {
+          if (kelas === "Ekonomi") hargaTiket = 60000;
+          else if (kelas === "Bisnis") hargaTiket = 85000;
+          else if (kelas === "Eksekutif") hargaTiket = 120000;
+        } else if (tujuan === "Trenggalek") {
+          if (kelas === "Ekonomi") hargaTiket = 70000;
+          else if (kelas === "Bisnis") hargaTiket = 95000;
+          else if (kelas === "Eksekutif") hargaTiket = 130000;
+        }
+
+        var subTotal = hargaTiket * jumlah;
+        var diskon = 0;
+
+        if (member) {
+          diskon = subTotal * 0.1;
+        }
+
+        var totalBayar = subTotal - diskon;
+
+        document.fform.iharga.value = hargaTiket.toLocaleString();
+        document.fform.isubtotal.value = subTotal.toLocaleString();
+        document.fform.idiskon.value = diskon.toLocaleString();
+        document.fform.itotal.value = totalBayar.toLocaleString();
+        alert(
+          "Nama: " +
+            nama +
+            "\nTujuan: " +
+            tujuan +
+            "\nKelas: " +
+            kelas +
+            "\nJumlah Tiket: " +
+            jumlah +
+            "\nHarga Tiket: " +
+            hargaTiket.toLocaleString() +
+            "\nSub Total: " +
+            subTotal.toLocaleString() +
+            "\nDiskon: " +
+            diskon.toLocaleString() +
+            "\nTotal Bayar: " +
+            totalBayar.toLocaleString()
+        );
+      }
+    </script>
+  </body>
+</html>

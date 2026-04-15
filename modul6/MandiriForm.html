@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="MandiriForm.css" />
+  </head>
+
+  <body>
+    <form>
+      <table>
+        <caption>
+          <h2>Formulir Pendaftaran</h2>
+        </caption>
+
+        <tr>
+          <td>Nama</td>
+          <td><input type="text" name="nama" /></td>
+        </tr>
+
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+
+        <tr>
+          <td>Tanggal Lahir</td>
+          <td>
+            <input type="text" size="2" placeholder="HH" /> /
+            <input type="text" size="2" placeholder="BB" /> /
+            <input type="text" size="4" placeholder="TTTT" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>
+            <label
+              ><input type="radio" name="gender" value="Laki-Laki" />
+              Laki-Laki</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Perempuan" />
+              Perempuan</label
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Jurusan</td>
+          <td>
+            <select name="jurusan">
+              <option value="RPL" selected>RPL</option>
+              <option value="TKJ">TKJ</option>
+              <option value="TM">TM</option>
+              <option value="DKV">DKV</option>
+              <option value="ANI">ANI</option>
+              <option value="TG">TG</option>
+              <option value="PH">PH</option>
+              <option value="TL">TL</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Hobi</td>
+          <td>
+            <label><input type="checkbox" /> Football</label>
+            <label><input type="checkbox" /> Traveling</label>
+            <label><input type="checkbox" /> Blogging</label><br />
+            <label><input type="checkbox" /> Music</label>
+            <label><input type="checkbox" /> Adventure</label>
+            <label><input type="checkbox" /> Lainnya</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Alamat</td>
+          <td><textarea name="alamat" rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Kirim</button>
+            <button type="reset">Batal</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

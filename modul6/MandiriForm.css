@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(135deg, #1d383b, #f0f8ff);
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+h2 {
+  color: #f7fcf9;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+table {
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  padding: 25px 40px;
+  border-collapse: separate;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+table:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+td {
+  padding: 10px 12px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 6px rgba(46, 139, 87, 0.4);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #2e8b57;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 16px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #256f47;
+  transform: scale(1.05);
+}
+
+button[type="reset"] {
+  background: #e74c3c;
+}
+
+button[type="reset"]:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+    padding: 20px;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
