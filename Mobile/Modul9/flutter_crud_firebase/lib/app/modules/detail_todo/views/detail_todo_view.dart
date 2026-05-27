@@ -25,8 +25,11 @@ class DetailTodoView extends GetView<DetailTodoController> {
             onPressed: () {
               Get.toNamed(Routes.EDIT_TODO, arguments: controller.argsData);
             },
+            style: TextButton.styleFrom(
+              backgroundColor: AppColor.primary,
+              foregroundColor: Colors.white,
+            ),
             child: Text('Edit'),
-            style: TextButton.styleFrom(backgroundColor: AppColor.primary),
           ),
         ],
         backgroundColor: Colors.white,
@@ -62,18 +65,17 @@ class DetailTodoView extends GetView<DetailTodoController> {
             onPressed: () {
               controller.deleteTodo();
             },
-            child: Text(
-              'Delete todo',
-
-              style: TextStyle(fontSize: 16, fontFamily: 'poppins'),
-            ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.warning,
+              backgroundColor: AppColor.error,
               padding: EdgeInsets.symmetric(vertical: 18),
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
+            ),
+            child: Text(
+              'Delete todo',
+              style: TextStyle(fontSize: 16, fontFamily: 'poppins'),
             ),
           ),
         ],

@@ -209,11 +209,11 @@ class HomeView extends GetView<HomeController> {
 
                         TextButton(
                           onPressed: () => Get.toNamed(Routes.ALL_TODO),
-
-                          child: Text("tampilkan semua"),
                           style: TextButton.styleFrom(
                             backgroundColor: AppColor.primary,
+                            foregroundColor: Colors.white,
                           ),
+                          child: Text("tampilkan semua"),
                         ),
                       ],
                     ),
@@ -318,6 +318,8 @@ class HomeView extends GetView<HomeController> {
         onPressed: () {
           Get.toNamed(Routes.ADD_TODO);
         },
+        backgroundColor: AppColor.primary,
+        foregroundColor: Colors.white,
         child: Icon(Icons.add),
       ),
     );
